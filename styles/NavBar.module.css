@@ -1,0 +1,12 @@
+.navbar {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.navbrand {
+  font-size: 2rem;
+}
+
+.navlink {
+  color: rgb(220, 220, 220) !important;
+}

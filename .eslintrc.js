@@ -30,5 +30,25 @@ module.exports = {
       specialLink: ['hrefLeft', 'hrefRight'],
       aspects: ['invalidHref', 'preferButton'],
     }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        '': 'never',
+      },
+    ],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx'],
+      },
+    },
   },
 };
