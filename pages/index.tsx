@@ -6,6 +6,7 @@ import NavBar from '../components/NavBar';
 const Home = () => {
   const titleHeader = 'Hello, I\'m Tony.';
   const titleMessage = 'I\'m an undergraduate computer science student at the University of Waterloo.';
+  const placeholderText = 'placeholder text';
   return (
     <>
       <Head>
@@ -20,34 +21,34 @@ const Home = () => {
           </Container>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
         <Jumbotron>
-          <p>{titleMessage}</p>
+          <p>{placeholderText}</p>
         </Jumbotron>
       </Container>
     </>
