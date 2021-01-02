@@ -1,7 +1,9 @@
-import Head from 'next/head';
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import Head from '../components/Head';
 import NavBar from '../components/NavBar';
+
+import styles from '../styles/Home.module.css';
 
 const Home = () => {
   const titleHeader = 'Hello, I\'m Tony.';
@@ -9,12 +11,10 @@ const Home = () => {
   const placeholderText = 'placeholder text';
   return (
     <>
-      <Head>
-        <title>Tony Li</title>
-      </Head>
+      <Head />
       <NavBar />
       <Container fluid>
-        <Jumbotron style={{ height: '80vh' }}>
+        <Jumbotron className={styles.mainJumbo}>
           <Container>
             <h1>{titleHeader}</h1>
             <p>{titleMessage}</p>

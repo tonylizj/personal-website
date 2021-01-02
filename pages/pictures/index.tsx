@@ -3,19 +3,19 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Head from '../../components/Head';
 import NavBar from '../../components/NavBar';
 
-const Projects = () => (
+const Pictures = () => (
   <>
-    <Head subpageTitle="Projects" />
+    <Head subpageTitle="Pictures" />
     <NavBar />
     <Container fluid>
       <Jumbotron>
         <Container>
-          <h1>Header - Projects</h1>
-          <p>Message - Projects</p>
+          <h1>Header - Pictures</h1>
+          <p>Message - Pictures</p>
         </Container>
       </Jumbotron>
     </Container>
   </>
 );
 
-export default Projects;
+export default Pictures;
