@@ -11,9 +11,8 @@
 }
 
 .mainJumbo {
-  background-color: rgb(18, 12, 48);
   /* TODO: add fallback for webp */
-  background-image: url('../public/images/night-sky.webp');
+  background: rgb(19, 9, 64) url('../public/images/night-sky.webp');
   background-size: cover;
 }
 
