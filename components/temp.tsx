@@ -6,10 +6,6 @@ import Button from 'react-bootstrap/Button';
 
 import styles from '../styles/Navbar.module.css';
 
-interface customNavbarProps {
-  currPage: string;
-}
-
 interface NextNavLinkProps {
   href: string;
   eventKey?: string;
@@ -39,6 +35,10 @@ const NextButtonLink = (props: React.PropsWithChildren<NextButtonLinkProps>) => 
     </Link>
   );
 };
+
+interface customNavbarProps {
+  currPage: string;
+}
 
 const customNavbar = (props: customNavbarProps) => {
   const { currPage } = props;
