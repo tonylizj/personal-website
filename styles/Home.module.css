@@ -1,5 +1,6 @@
 .mainJumbo {
   height: 50rem;
+  background-color: rgb(18, 12, 48);
   background-image: url('../public/images/night-sky.webp');
   background-size: cover;
 }
