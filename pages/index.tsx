@@ -13,11 +13,11 @@ const Home = () => {
     <>
       <Head />
       <Navbar currPage="home" />
-      <Container fluid>
-        <Jumbotron className={styles.mainJumbo}>
+      <Container className="d-flex flex-column" fluid>
+        <Jumbotron className={`${styles.mainJumbo}`}>
           <Container>
-            <h1>{titleHeader}</h1>
-            <p>{titleMessage}</p>
+            <h1 style={{ color: 'white' }}>{titleHeader}</h1>
+            <p style={{ color: 'white' }}>{titleMessage}</p>
           </Container>
         </Jumbotron>
         <Jumbotron>

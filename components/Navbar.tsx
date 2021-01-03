@@ -43,7 +43,7 @@ interface customNavbarProps {
 const customNavbar = (props: customNavbarProps) => {
   const { currPage } = props;
   return (
-    <Navbar className={styles.navbar} bg="primary" variant="dark" expand="sm" sticky="top">
+    <Navbar style={{ backgroundColor: 'black' }} className={styles.navbar} variant="dark" expand="sm" sticky="top">
       <Link href="/" passHref>
         <Navbar.Brand className={styles.navbrand}>Tony Li</Navbar.Brand>
       </Link>
