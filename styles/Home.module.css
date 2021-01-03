@@ -1,6 +1,47 @@
+/* entire page */
+.wrapperFull {
+  height: 100vh;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.belowNav {
+  /* navbar height = 4.625rem, jumbotron margin-top = 1rem */
+  height: calc(100vh - 4.625rem);
+}
+
 .mainJumbo {
-  height: 50rem;
   background-color: rgb(18, 12, 48);
+  /* TODO: add fallback for webp */
   background-image: url('../public/images/night-sky.webp');
   background-size: cover;
+}
+
+/* basically a div */
+.wrapper {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.header {
+  color: white;
+  font-size: 4rem;
+}
+
+.subtitle {
+  color: white;
+  font-size: 2rem;
+  white-space: pre-line;
+}
+
+.message {
+  color: white;
+  font-size: 1.5rem;
+  white-space: pre-line;
+}
+
+.construction {
+  color: white;
+  font-size: 1.5rem;
+  white-space: pre-line;
 }
