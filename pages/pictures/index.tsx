@@ -1,12 +1,12 @@
 import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import Jumbotron from '../../components/Jumbotron';
 import Head from '../../components/Head';
-import NavBar from '../../components/NavBar';
+import Navbar from '../../components/Navbar';
 
 const Pictures = () => (
   <>
     <Head subpageTitle="Pictures" />
-    <NavBar />
+    <Navbar currPage="pictures" />
     <Container fluid>
       <Jumbotron>
         <Container>

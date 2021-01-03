@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import Jumbotron from '../components/Jumbotron';
 import Head from '../components/Head';
-import NavBar from '../components/NavBar';
+import Navbar from '../components/Navbar';
 
 import styles from '../styles/Home.module.css';
 
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <Head />
-      <NavBar />
+      <Navbar currPage="home" />
       <Container fluid>
         <Jumbotron className={styles.mainJumbo}>
           <Container>
