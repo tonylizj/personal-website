@@ -1,5 +1,5 @@
 .mainJumbo {
-  background: rgb(5, 19, 62) url('../public/images/tower.webp');
+  background: url('../public/images/tower.webp');
   background-size: cover;
   background-position: top;
 }

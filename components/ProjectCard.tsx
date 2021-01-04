@@ -48,7 +48,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           </Link>
         </Container>
         <Container className="d-flex justify-content-around">
-          {buttons.map((b) => <Button variant="outline-primary" className="mr-2" href={b.url} target="_blank">{b.name}</Button>)}
+          {buttons.map((b) => <Button key={b.url} variant="outline-primary" className="mr-2" href={b.url} target="_blank">{b.name}</Button>)}
         </Container>
       </Card.Body>
     </Card>

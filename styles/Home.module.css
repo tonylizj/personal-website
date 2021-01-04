@@ -12,7 +12,7 @@
 
 .mainJumbo {
   /* TODO: add fallback for webp */
-  background: rgb(19, 9, 64) url('../public/images/night-sky.webp');
+  background: url('../public/images/night-sky.webp');
   background-size: cover;
   background-position: center;
 }
