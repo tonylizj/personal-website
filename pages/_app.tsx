@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppProps } from 'next/app';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 interface requiredImage {
   format: string;
@@ -12,16 +12,14 @@ interface requiredImage {
 }
 
 const App = ({ Component, pageProps }: AppProps) => {
-  const [images, setImages] = useState<HTMLImageElement[]>([]);
-
   useEffect(() => {
-    const img: HTMLImageElement[] = [];
+    (window as any).preloadedImages = [];
     const preload = (...imageInputs: requiredImage[]) => {
-      imageInputs.forEach((image, index) => {
-        img[index] = new Image();
-        img[index].src = image.toString();
+      imageInputs.forEach((image) => {
+        const newImage = new Image();
+        newImage.src = image.toString();
+        (window as any).preloadedImages.push(newImage);
       });
-      setImages(img);
     };
 
     preload(
@@ -30,7 +28,11 @@ const App = ({ Component, pageProps }: AppProps) => {
       require('../public/images/tree.jpeg?webp'), // eslint-disable-line
     );
 
-    setTimeout(() => { console.log(images); }, 1000);
+    setTimeout(() => {
+      console.log('startStateLog');
+      console.log((window as any).preloadedImages);
+      console.log('endStateLog');
+    }, 5000);
   }, []);
 
   return <Component {...pageProps} />;
