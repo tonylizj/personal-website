@@ -25,11 +25,12 @@ const Projects = () => (
               image="images/flowerid-icon.png"
             />
             <ProjectCard
+              // TODO: better icon
               title="highlighter"
               message="highlighter description"
               details="/projects/highlighter"
               buttons={[
-                { name: 'GitHub', url: 'https://github.com/tonylizj/FlowerID-App' },
+                { name: 'GitHub', url: 'https://github.com/tonylizj/highlighter' },
                 { name: 'API', url: 'https://highlighter-api.herokuapp.com/' },
                 { name: 'UI', url: 'https://tonylizj.github.io/highlighter-ui/' },
               ]}
