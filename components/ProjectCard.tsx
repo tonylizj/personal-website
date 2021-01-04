@@ -1,5 +1,5 @@
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -16,29 +16,19 @@ interface ProjectCardProps {
   message: string;
   details: string;
   buttons: ProjectLink[];
-  image: string;
 }
 
-const ProjectCard = (props: ProjectCardProps) => {
+const ProjectCard = (props: React.PropsWithChildren<ProjectCardProps>) => {
   const {
     title,
     message,
     details,
     buttons,
-    image,
+    children,
   } = props;
   return (
     <Card style={{ width: '18rem' }}>
-      <Container className={styles.cardImg} fluid>
-        <Image
-          layout="responsive"
-          className="card-img-top"
-          src={`/${image}`}
-          height="286px"
-          width="286px"
-          priority
-        />
-      </Container>
+      {children}
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{message}</Card.Text>

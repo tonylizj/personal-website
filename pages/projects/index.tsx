@@ -1,4 +1,6 @@
 import Container from 'react-bootstrap/Container';
+import Img from 'react-optimized-image';
+
 import ProjectCard from '../../components/ProjectCard';
 import Jumbotron from '../../components/Jumbotron';
 import Head from '../../components/Head';
@@ -22,8 +24,13 @@ const Projects = () => (
                 { name: 'GitHub', url: 'https://github.com/tonylizj/FlowerID-App' },
                 { name: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.flowerid' },
               ]}
-              image="images/flowerid-icon.png"
-            />
+            >
+              <Img
+                // eslint-disable-next-line global-require
+                src={require('../../public/images/flowerid-icon.png')}
+                className="card-img-top"
+              />
+            </ProjectCard>
             <ProjectCard
               // TODO: better icon
               title="highlighter"
@@ -34,8 +41,14 @@ const Projects = () => (
                 { name: 'API', url: 'https://highlighter-api.herokuapp.com/' },
                 { name: 'UI', url: 'https://tonylizj.github.io/highlighter-ui/' },
               ]}
-              image="images/highlighter-icon.png"
-            />
+              // eslint-disable-next-line global-require
+            >
+              <Img
+                // eslint-disable-next-line global-require
+                src={require('../../public/images/highlighter-icon.png')}
+                className="card-img-top"
+              />
+            </ProjectCard>
           </Container>
         </Jumbotron>
       </Container>

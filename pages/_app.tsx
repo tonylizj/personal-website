@@ -26,6 +26,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       require('../public/images/tower.jpeg?webp'), // eslint-disable-line
       require('../public/images/night-sky.jpeg?webp'), // eslint-disable-line
       require('../public/images/tree.jpeg?webp'), // eslint-disable-line
+      require('../public/images/flowerid-icon.png?webp'), // eslint-disable-line
+      require('../public/images/highlighter-icon.png?webp'), // eslint-disable-line
     );
   }, []);
 
