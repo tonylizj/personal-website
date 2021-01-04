@@ -1,0 +1,17 @@
+.mainJumbo {
+  background: rgb(5, 19, 62) url('../public/images/tower.webp');
+  background-size: cover;
+  background-position: top;
+}
+
+/* entire page */
+.wrapperFull {
+  height: 100vh;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.belowNav {
+  /* navbar height = 4.625rem, jumbotron margin-top = 1rem */
+  height: calc(100vh - 4.625rem);
+}

@@ -17,7 +17,7 @@ const Home = () => {
       <Head />
       <Container className={styles.wrapperFull} fluid>
         <Navbar currPage="home" />
-        <Container className={`d-flex flex-row ${styles.belowNav}`} fluid>
+        <Container className={`d-flex flex-column ${styles.belowNav}`} fluid>
           <Jumbotron className={`d-flex flex-grow-1 ${styles.mainJumbo}`}>
             <Container className="d-flex flex-column flex-grow-1 justify-content-between">
               <Container className={styles.wrapper} fluid>

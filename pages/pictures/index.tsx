@@ -1,19 +1,22 @@
+import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Jumbotron from '../../components/Jumbotron';
 import Head from '../../components/Head';
 import Navbar from '../../components/Navbar';
 
+import styles from '../../styles/Pictures.module.css';
+
 const Pictures = () => (
   <>
     <Head subpageTitle="Pictures" />
-    <Navbar currPage="pictures" />
-    <Container fluid>
-      <Jumbotron>
-        <Container>
-          <h1>Header - Pictures</h1>
-          <p>Message - Pictures</p>
-        </Container>
-      </Jumbotron>
+    <Container className={styles.wrapperFull} fluid>
+      <Navbar currPage="pictures" />
+      <Container className={`d-flex flex-column ${styles.belowNav}`} fluid>
+        <Jumbotron className={`d-flex flex-grow-1 ${styles.mainJumbo}`}>
+          <Container className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-start">
+          </Container>
+        </Jumbotron>
+      </Container>
     </Container>
   </>
 );

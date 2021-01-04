@@ -1,0 +1,34 @@
+.image {
+  object-position: center;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* entire page */
+.wrapperFull {
+  height: 100vh;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+/* basically a div */
+.imgWrapper {
+  margin: 0rem;
+  padding: 0rem;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  flex-shrink: 0;
+  width: 100%;
+  vertical-align: middle;
+  border-style: none;
+  box-sizing: border-box;
+}
+
+.belowNav {
+  /* navbar height = 4.625rem, jumbotron margin-top = 1rem */
+  height: calc(100vh - 4.625rem);
+}
+
+.image {
+  pointer-events: none;
+}
