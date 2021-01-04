@@ -12,6 +12,6 @@
 }
 
 .belowNav {
-  /* navbar height = 4.625rem, jumbotron margin-top = 1rem */
-  height: calc(100vh - 4.625rem);
+  /* navbar height = 5rem, jumbotron margin-top = 1rem */
+  height: calc(100vh - 5rem);
 }

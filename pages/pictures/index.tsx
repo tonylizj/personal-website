@@ -11,9 +11,11 @@ const Pictures = () => (
     <Container className={styles.wrapperFull} fluid>
       <Navbar currPage="pictures" />
       <Container className={`d-flex flex-column ${styles.belowNav}`} fluid>
-        <Jumbotron className={`d-flex flex-grow-1 ${styles.mainJumbo}`}>
-          <Container className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-start">
-          </Container>
+        <Jumbotron className={`d-flex flex-grow-1 flex-column ${styles.mainJumbo}`}>
+          <h1 className={styles.description}>This is going to be a photo gallery</h1>
+          <h3 className={styles.description}>...eventually</h3>
+          {/* <Container className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-start">
+          </Container> */}
         </Jumbotron>
       </Container>
     </Container>

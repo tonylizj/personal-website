@@ -30,17 +30,19 @@ const ProjectCard = (props: React.PropsWithChildren<ProjectCardProps>) => {
     <Card style={{ width: '18rem' }}>
       {children}
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title as="h3">{title}</Card.Title>
         <Card.Text>{message}</Card.Text>
+      </Card.Body>
+      <Card.Footer>
         <Container className={`d-flex ${styles.details}`}>
           <Link href={details} passHref>
             <Button className="flex-grow-1" variant="primary">See Details</Button>
           </Link>
         </Container>
         <Container className="d-flex justify-content-around">
-          {buttons.map((b) => <Button key={b.url} variant="outline-primary" className="mr-2" href={b.url} target="_blank">{b.name}</Button>)}
+          {buttons.map((b) => <Button key={b.url} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>)}
         </Container>
-      </Card.Body>
+      </Card.Footer>
     </Card>
   );
 };

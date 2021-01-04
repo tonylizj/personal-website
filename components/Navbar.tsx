@@ -25,13 +25,16 @@ const NextNavLink = (props: React.PropsWithChildren<NextNavLinkProps>) => {
 interface NextButtonLinkProps {
   href: string;
   eventKey?: string;
+  disabled?: boolean;
 }
 
 const NextButtonLink = (props: React.PropsWithChildren<NextButtonLinkProps>) => {
-  const { children, href } = props;
+  const { children, href, disabled } = props;
   return (
     <Link href={href} passHref>
-      <Button className={styles.btn} variant="outline-light" target="_blank">{children}</Button>
+      {disabled
+        ? <Button className={styles.btn} variant="outline-light" size="lg" target="_blank" disabled>{children}</Button>
+        : <Button className={styles.btn} variant="outline-light" size="lg" target="_blank">{children}</Button>}
     </Link>
   );
 };
@@ -44,9 +47,7 @@ const customNavbar = (props: customNavbarProps) => {
   const { currPage } = props;
   return (
     <Navbar className={styles.navbar} variant="dark" expand="md" sticky="top">
-      <Link href="/" passHref>
-        <Navbar.Brand className={styles.navbrand}>Tony Li</Navbar.Brand>
-      </Link>
+      <Navbar.Brand className={styles.navbrand}>Tony Li</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav defaultActiveKey={currPage} className="mr-auto">
@@ -57,7 +58,7 @@ const customNavbar = (props: customNavbarProps) => {
         <NextButtonLink href="https://github.com/tonylizj">
           GitHub
         </NextButtonLink>
-        <NextButtonLink href="/">
+        <NextButtonLink href="/" disabled>
           Resume
         </NextButtonLink>
       </Navbar.Collapse>

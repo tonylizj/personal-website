@@ -1,12 +1,16 @@
 .navbar {
-  font-size: 1.5rem;
+  font-size: 2rem;
   background-color: black;
 }
 
 .navbrand {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  min-width: 10rem;
+  text-align: center;
 }
 
 .btn {
+  border-width: 0.18rem;
+  border-radius: 0.5rem;
   margin-right: 1rem;
 }

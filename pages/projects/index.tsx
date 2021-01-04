@@ -26,8 +26,7 @@ const Projects = () => (
               ]}
             >
               <Img
-                // eslint-disable-next-line global-require
-                src={require('../../public/images/flowerid-icon.png')}
+                src={require('../../public/images/flowerid-icon.png?webp')} // eslint-disable-line
                 className="card-img-top"
               />
             </ProjectCard>
@@ -41,11 +40,9 @@ const Projects = () => (
                 { name: 'API', url: 'https://highlighter-api.herokuapp.com/' },
                 { name: 'UI', url: 'https://tonylizj.github.io/highlighter-ui/' },
               ]}
-              // eslint-disable-next-line global-require
             >
               <Img
-                // eslint-disable-next-line global-require
-                src={require('../../public/images/highlighter-icon.png')}
+                src={require('../../public/images/highlighter-icon.png?webp')}  // eslint-disable-line
                 className="card-img-top"
               />
             </ProjectCard>

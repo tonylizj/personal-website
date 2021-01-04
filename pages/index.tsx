@@ -11,7 +11,7 @@ const Home = () => {
   const message = `
   To navigate this website, use the links in the header.
   `;
-  const construction = 'This website is under construction.';
+  const construction = 'This website is under construction!';
   return (
     <>
       <Head />
