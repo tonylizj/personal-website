@@ -12,7 +12,7 @@ interface requiredImage {
 }
 
 const App = ({ Component, pageProps }: AppProps) => {
-  useEffect(() => {
+  useEffect(() => { // TODO: make this work in firefox
     (window as any).preloadedImages = [];
     const preload = (...imageInputs: requiredImage[]) => {
       imageInputs.forEach((image) => {
@@ -27,12 +27,6 @@ const App = ({ Component, pageProps }: AppProps) => {
       require('../public/images/night-sky.jpeg?webp'), // eslint-disable-line
       require('../public/images/tree.jpeg?webp'), // eslint-disable-line
     );
-
-    setTimeout(() => {
-      console.log('startStateLog');
-      console.log((window as any).preloadedImages);
-      console.log('endStateLog');
-    }, 5000);
   }, []);
 
   return <Component {...pageProps} />;
