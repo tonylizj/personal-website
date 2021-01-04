@@ -11,10 +11,9 @@
 }
 
 .mainJumbo {
-  /* TODO: add fallback for webp */
-  background: url('../public/images/night-sky.webp');
+  background: url('../public/images/tower.jpeg?webp'), url('../public/images/tower.jpeg?webp&lqip');
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 /* basically a div */

@@ -1,5 +1,5 @@
 .mainJumbo {
-  background: url('../public/images/tower.webp');
+  background: url('../public/images/night-sky.jpeg?webp'), url('../public/images/night-sky.jpeg?webp&lqip');
   background-size: cover;
   background-position: top;
 }

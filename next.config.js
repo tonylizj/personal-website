@@ -3,7 +3,7 @@ const optimizedImages = require('next-optimized-images');
 
 module.exports = withPlugins([
   [optimizedImages, {
-    optimizeImagesInDec: true,
+    optimizeImagesInDev: true,
     /* config for next-optimized-images */
   }],
 
