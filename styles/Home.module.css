@@ -11,7 +11,7 @@
 }
 
 .mainJumbo {
-  background: url('/public/images/tower.webp'), url('/public/images/lqip/tower-lqip.webp'), black;
+  background: url('/images/tower.webp'), url('/images/lqip/tower-lqip.webp'), black;
   background-size: cover;
   background-position: center;
 }

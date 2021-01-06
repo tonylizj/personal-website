@@ -16,7 +16,7 @@
 }
 
 .mainJumbo {
-  background: url('/public/images/tree.webp'), url('/public/images/lqip/tree-lqip.webp'), black;
+  background: url('/images/tree.webp'), url('/images/lqip/tree-lqip.webp'), black;
   background-size: cover;
   background-position: top;
 }
