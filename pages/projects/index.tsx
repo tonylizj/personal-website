@@ -1,5 +1,4 @@
 import Container from 'react-bootstrap/Container';
-import Img from 'react-optimized-image';
 
 import ProjectCard from '../../components/ProjectCard';
 import Jumbotron from '../../components/Jumbotron';
@@ -16,7 +15,7 @@ const Projects = () => (
       <Container className={`d-flex flex-column ${styles.belowNav}`} fluid>
         <Jumbotron className={`d-flex flex-grow-1 ${styles.mainJumbo}`}>
           <Container className="d-flex flex-row flex-grow-1 flex-wrap justify-content-around align-content-start">
-            <ProjectCard
+            <ProjectCard // TODO: test these with next/image
               title="FlowerID"
               message="FlowerID description"
               details="/projects/flowerid"
@@ -25,8 +24,9 @@ const Projects = () => (
                 { name: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.flowerid' },
               ]}
             >
-              <Img
-                src={require('../../public/images/flowerid-icon.png?webp')} // eslint-disable-line
+              <img
+                alt="flowerid-icon"
+                src="images/flowerid-icon.png"
                 className="card-img-top"
               />
             </ProjectCard>
@@ -41,8 +41,9 @@ const Projects = () => (
                 { name: 'UI', url: 'https://tonylizj.github.io/highlighter-ui/' },
               ]}
             >
-              <Img
-                src={require('../../public/images/highlighter-icon.png?webp')}  // eslint-disable-line
+              <img
+                alt="highlighter-icon"
+                src="images/highlighter-icon.png"
                 className="card-img-top"
               />
             </ProjectCard>

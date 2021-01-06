@@ -6,12 +6,9 @@ import { AppProps } from 'next/app';
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
-      {/* eslint-disable-next-line */}
-      <link rel="preload" href={require('../public/images/tower.jpeg?webp')} as="image" />
-      {/* eslint-disable-next-line */}
-      <link rel="preload" href={require('../public/images/night-sky.jpeg?webp')} as="image" />
-      {/* eslint-disable-next-line */}
-      <link rel="preload" href={require('../public/images/tree.jpeg?webp')} as="image" />
+      <link rel="preload" href="../public/images/tower.webp" as="image" />
+      <link rel="preload" href="../public/images/night-sky.webp" as="image" />
+      <link rel="preload" href="../public/images/tree.webp" as="image" />
     </Head>
     <Component {...pageProps} />
   </>
