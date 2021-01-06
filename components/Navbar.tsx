@@ -43,7 +43,7 @@ interface customNavbarProps {
   currPage: string;
 }
 
-const customNavbar = (props: customNavbarProps) => {
+const customNavbar = (props: customNavbarProps) => { // TODO: better spacing and smaller
   const { currPage } = props;
   return (
     <Navbar className={styles.navbar} variant="dark" expand="md" sticky="top">
