@@ -6,9 +6,9 @@ import { AppProps } from 'next/app';
 const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
-      <link rel="preload" href="../public/images/tower.webp" as="image" />
-      <link rel="preload" href="../public/images/night-sky.webp" as="image" />
-      <link rel="preload" href="../public/images/tree.webp" as="image" />
+      <link rel="preload" href="images/tower.webp" as="image" />
+      <link rel="preload" href="images/night-sky.webp" as="image" />
+      <link rel="preload" href="images/tree.webp" as="image" />
     </Head>
     <Component {...pageProps} />
   </>
