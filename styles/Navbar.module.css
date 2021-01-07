@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.navlink {
+  margin-right: 0.3rem;
+}
+
 .btn {
   border-width: 0.18rem;
   border-radius: 0.5rem;

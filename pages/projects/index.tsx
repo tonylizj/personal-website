@@ -12,7 +12,7 @@ const Projects = () => (
     <PageBase pageName="projects">
       <Jumbotron className={styles.mainJumbo}>
         <Container className={styles.insideMainJumbo}>
-          <ProjectCard // TODO: test these with next/image
+          <ProjectCard
             title="FlowerID"
             message="FlowerID description"
             details="/projects/flowerid"

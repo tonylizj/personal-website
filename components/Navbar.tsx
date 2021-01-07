@@ -16,8 +16,8 @@ const NextNavLink = (props: React.PropsWithChildren<NextNavLinkProps>) => {
   return (
     <Link href={href} passHref>
       {eventKey
-        ? <Nav.Link eventKey={eventKey}>{children}</Nav.Link>
-        : <Nav.Link>{children}</Nav.Link>}
+        ? <Nav.Link className={styles.navlink} eventKey={eventKey}>{children}</Nav.Link>
+        : <Nav.Link className={styles.navlink}>{children}</Nav.Link>}
     </Link>
   );
 };
@@ -43,7 +43,7 @@ interface customNavbarProps {
   currPage: string;
 }
 
-const customNavbar = (props: customNavbarProps) => { // TODO: better spacing and smaller
+const customNavbar = (props: customNavbarProps) => {
   const { currPage } = props;
   return (
     <Navbar className={styles.navbar} variant="dark" expand="md" sticky="top">
