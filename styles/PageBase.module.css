@@ -1,0 +1,13 @@
+/* entire page */
+.wrapperFull {
+  height: 100vh;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.belowNav {
+  display: flex;
+  flex-direction: column;
+  /* navbar height = 4.55rem, jumbotron margin-top = 1rem */
+  min-height: calc(100vh - 4.55rem);
+}

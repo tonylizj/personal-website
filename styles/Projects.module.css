@@ -1,17 +1,16 @@
 .mainJumbo {
+  display: flex;
+  flex-grow: 1;
   background: url('../public/images/night-sky.webp'), url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAAgACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP4srqwiSB8jEmOnf0Hrnp/nPH9rYjBUY4eUZfxXFtJStpd3Sve9t77affo6tWFb2jcuZO7crxj0XK42WjT20aXUwhGgABBBAwRjpj/gVeUsFKytKKVlo5NNeTs9z1U+ZKVo+8k/i7q/8x//2Q=='), black;
   background-size: cover;
   background-position: top;
 }
 
-/* entire page */
-.wrapperFull {
-  height: 100vh;
-  margin: 0rem;
-  padding: 0rem;
-}
-
-.belowNav {
-  /* navbar height = 5rem, jumbotron margin-top = 1rem */
-  height: calc(100vh - 5rem);
+.insideMainJumbo {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }

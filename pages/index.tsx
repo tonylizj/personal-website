@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Jumbotron from '../components/Jumbotron';
 import Head from '../components/Head';
-import Navbar from '../components/Navbar';
+import PageBase from '../components/PageBase';
 
 import styles from '../styles/Home.module.css';
 
@@ -15,27 +15,24 @@ const Home = () => {
   return (
     <>
       <Head />
-      <Container className={styles.wrapperFull} fluid>
-        <Navbar currPage="home" />
-        <Container className={`d-flex flex-column ${styles.belowNav}`} fluid>
-          <Jumbotron className={`d-flex flex-grow-1 ${styles.mainJumbo}`}>
-            <Container className="d-flex flex-column flex-grow-1 justify-content-between">
+      <PageBase pageName="home">
+        <Jumbotron className={styles.mainJumbo}>
+          <Container className={styles.insideMainJumbo}>
+            <Container className={styles.wrapper} fluid>
               <Container className={styles.wrapper} fluid>
-                <Container className={styles.wrapper} fluid>
-                  <h1 className={styles.header}>{title}</h1>
-                  <h4 className={styles.subtitle}>{subtitle}</h4>
-                </Container>
-                <Container className={styles.wrapper} fluid>
-                  <p className={styles.message}>{message}</p>
-                </Container>
+                <h1 className={styles.header}>{title}</h1>
+                <h4 className={styles.subtitle}>{subtitle}</h4>
               </Container>
               <Container className={styles.wrapper} fluid>
-                <p className={styles.construction}>{construction}</p>
+                <p className={styles.message}>{message}</p>
               </Container>
             </Container>
-          </Jumbotron>
-        </Container>
-      </Container>
+            <Container className={styles.wrapper} fluid>
+              <p className={styles.construction}>{construction}</p>
+            </Container>
+          </Container>
+        </Jumbotron>
+      </PageBase>
     </>
   );
 };

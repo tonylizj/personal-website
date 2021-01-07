@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -16,30 +17,34 @@ interface ProjectCardProps {
   message: string;
   details: string;
   buttons: ProjectLink[];
+  image: string;
 }
 
-const ProjectCard = (props: React.PropsWithChildren<ProjectCardProps>) => {
+const ProjectCard = (props: ProjectCardProps) => {
   const {
     title,
     message,
     details,
     buttons,
-    children,
+    image,
   } = props;
   return (
-    <Card style={{ width: '18rem' }}>
-      {children}
+    <Card className={styles.card}>
+      <Container className={styles.nextImageContainer}>
+        <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="80" loading="eager" priority />
+      </Container>
+      {/* <Card.Img variant="top" src={image} /> */}
       <Card.Body>
         <Card.Title as="h3">{title}</Card.Title>
         <Card.Text>{message}</Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Container className={`d-flex ${styles.details}`}>
+        <Container className={styles.details}>
           <Link href={details} passHref>
-            <Button className="flex-grow-1" variant="primary">See Details</Button>
+            <Button className={styles.detailsButton} variant="primary">See Details</Button>
           </Link>
         </Container>
-        <Container className="d-flex justify-content-around">
+        <Container className={styles.buttonContainer}>
           {buttons.map((b) => <Button key={b.url} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>)}
         </Container>
       </Card.Footer>
