@@ -7,7 +7,7 @@ import Jumbotron from '../../components/Jumbotron';
 
 import styles from '../../styles/Flowerid.module.css';
 
-const Flowerid = () => (
+const Flowerid = () => ( // TODO: put all this into template components for project details
   <>
     <Head subpageTitle="Projects/FlowerID" />
     <PageBase pageName="projects">
