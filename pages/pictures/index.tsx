@@ -9,8 +9,7 @@ const Pictures = () => (
     <Head subpageTitle="Pictures" />
     <PageBase pageName="pictures">
       <Jumbotron className={styles.mainJumbo}>
-        <h1 className={styles.description}>This is going to be a photo gallery</h1>
-        <h3 className={styles.description}>...eventually</h3>
+        <h1 className={styles.description}>There is nothing here yet.</h1>
       </Jumbotron>
     </PageBase>
   </>

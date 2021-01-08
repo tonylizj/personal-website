@@ -1,5 +1,15 @@
 .card {
   width: 18rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1rem;
 }
 
 .details {

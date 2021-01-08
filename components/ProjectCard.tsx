@@ -31,12 +31,12 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <Card className={styles.card}>
       <Container className={styles.nextImageContainer}>
-        <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="80" loading="eager" priority />
+        <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="90" loading="eager" priority />
       </Container>
       {/* <Card.Img variant="top" src={image} /> */}
       <Card.Body>
-        <Card.Title as="h3">{title}</Card.Title>
-        <Card.Text>{message}</Card.Text>
+        <Card.Title className={styles.title}>{title}</Card.Title>
+        <Card.Text className={styles.description}>{message}</Card.Text>
       </Card.Body>
       <Card.Footer>
         <Container className={styles.details}>

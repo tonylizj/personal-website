@@ -8,9 +8,40 @@
 
 .insideMainJumbo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-grow: 1;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: flex-start;
   align-content: flex-start;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 2rem;
+}
+
+.cardSubtitle {
+  margin-bottom: 1rem;
+}
+
+.cardText {
+  flex-grow: 1;
+}
+
+.cardAttachments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.linkContainer {
+  margin-top: 1rem;
 }

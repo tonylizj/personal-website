@@ -14,7 +14,7 @@ const Projects = () => (
         <Container className={styles.insideMainJumbo}>
           <ProjectCard
             title="FlowerID"
-            message="FlowerID description"
+            message="Android app that identifies photos of flowers using a convolutional neural network."
             details="/projects/flowerid"
             buttons={[
               { name: 'GitHub', url: 'https://github.com/tonylizj/FlowerID-App' },
@@ -23,9 +23,8 @@ const Projects = () => (
             image="images/flowerid-icon.png"
           />
           <ProjectCard
-              // TODO: better icon
             title="highlighter"
-            message="highlighter description"
+            message="Node.js + Express API and Discord bot that syntax highlights code."
             details="/projects/highlighter"
             buttons={[
               { name: 'GitHub', url: 'https://github.com/tonylizj/highlighter' },

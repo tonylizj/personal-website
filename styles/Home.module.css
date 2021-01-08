@@ -20,6 +20,8 @@
 }
 
 .header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: white;
   font-size: 4rem;
 }
