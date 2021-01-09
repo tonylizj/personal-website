@@ -4,6 +4,7 @@
 }
 
 .mainJumbo {
+  padding: 1.5rem 1rem;
   display: flex;
   flex-grow: 1;
   flex-direction: column;

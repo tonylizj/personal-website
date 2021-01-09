@@ -35,17 +35,25 @@ const ProjectCard = (props: ProjectCardProps) => {
       </Container>
       {/* <Card.Img variant="top" src={image} /> */}
       <Card.Body>
-        <Card.Title className={styles.title}>{title}</Card.Title>
+        <Link href={details} passHref>
+          <a>
+            <Card.Title className={styles.title}>{title}</Card.Title>
+          </a>
+        </Link>
         <Card.Text className={styles.description}>{message}</Card.Text>
       </Card.Body>
       <Card.Footer>
         <Container className={styles.details}>
           <Link href={details} passHref>
-            <Button className={styles.detailsButton} variant="primary">See Details</Button>
+            <Button className={styles.detailsButton} variant="primary">
+              About
+              {' '}
+              {title}
+            </Button>
           </Link>
         </Container>
         <Container className={styles.buttonContainer}>
-          {buttons.map((b) => <Button key={b.url} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>)}
+          {buttons.map((b) => <Button key={b.url} className={styles.linkButton} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>)}
         </Container>
       </Card.Footer>
     </Card>

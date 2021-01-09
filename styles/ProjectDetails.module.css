@@ -1,4 +1,5 @@
 .mainJumbo {
+  padding: 1.5rem 1rem;
   display: flex;
   flex-grow: 1;
   background: url('../public/images/night-sky.webp'), url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAAgACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP4srqwiSB8jEmOnf0Hrnp/nPH9rYjBUY4eUZfxXFtJStpd3Sve9t77affo6tWFb2jcuZO7crxj0XK42WjT20aXUwhGgABBBAwRjpj/gVeUsFKytKKVlo5NNeTs9z1U+ZKVo+8k/i7q/8x//2Q=='), black;
@@ -16,15 +17,39 @@
 
 .card {
   width: 100%;
-  height: 100%;
+  /* navbar height = 4.55rem, jumbotron margin-top = 1rem */
+  height: calc(100vh - 4.55rem - 7rem);
+}
+
+.buttonContainer {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-height: 4rem;
+}
+
+.buttonsName {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+.linkButton {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-right: 0.5rem;
 }
 
 .cardBody {
+  overflow: auto;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
+  white-space: pre-line;
 }
 
 .cardTitle {
+  margin-top: 0.5rem;
   font-size: 2rem;
 }
 
@@ -39,9 +64,17 @@
 .cardAttachments {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: max-content;
 }
 
 .linkContainer {
   margin-top: 1rem;
+  padding-bottom: 2rem;
 }

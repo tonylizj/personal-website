@@ -14,22 +14,23 @@ const Projects = () => (
         <Container className={styles.insideMainJumbo}>
           <ProjectCard
             title="FlowerID"
-            message="Android app that identifies photos of flowers using a convolutional neural network."
+            message="Android app built with React Native that identifies photos of flowers using a convolutional neural network."
             details="/projects/flowerid"
             buttons={[
               { name: 'GitHub', url: 'https://github.com/tonylizj/FlowerID-App' },
-              { name: 'Play Store', url: 'https://play.google.com/store/apps/details?id=com.flowerid' },
+              { name: 'Google Play Store', url: 'https://play.google.com/store/apps/details?id=com.flowerid' },
             ]}
             image="images/flowerid-icon.png"
           />
           <ProjectCard
             title="highlighter"
-            message="Node.js + Express API and Discord bot that syntax highlights code."
+            message="Discord bot and React web app with a Node.js + Express REST API backend that syntax highlights code."
             details="/projects/highlighter"
             buttons={[
               { name: 'GitHub', url: 'https://github.com/tonylizj/highlighter' },
               { name: 'API', url: 'https://highlighter-api.herokuapp.com/' },
-              { name: 'UI', url: 'https://tonylizj.github.io/highlighter-ui/' },
+              { name: 'Front End', url: 'https://tonylizj.github.io/highlighter-ui/' },
+              { name: 'Bot Invite', url: 'https://discord.com/api/oauth2/authorize?client_id=791903902874206258&permissions=10240&scope=bot' },
             ]}
             image="images/highlighter-icon.png"
           />

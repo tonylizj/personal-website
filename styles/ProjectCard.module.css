@@ -4,6 +4,7 @@
 }
 
 .title {
+  color: black;
   font-size: 2rem;
   font-weight: 600;
 }
@@ -18,12 +19,19 @@
 }
 
 .detailsButton {
+  font-size: 1.2rem;
+  font-weight: 600;
   flex-grow: 1;
 }
 
 .buttonContainer {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.linkButton {
+  margin-bottom: 0.3rem;
 }
 
 .nextImageContainer {
