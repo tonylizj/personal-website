@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* basically a div */
@@ -20,28 +20,53 @@
   padding: 0rem;
 }
 
-.header {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+.title {
+  height: fit-content;
+  max-width: fit-content;
   color: white;
   font-size: 4rem;
 }
 
 .subtitle {
+  height: fit-content;
+  width: fit-content;
   color: white;
   font-size: 2rem;
-  white-space: pre-line;
-}
-
-.message {
-  color: white;
-  font-size: 1.5rem;
-  white-space: pre-line;
 }
 
 .construction {
   color: white;
-  font-size: 1.5rem;
-  white-space: pre-line;
+  font-size: 1.3rem;
   text-align: right;
+}
+
+.titleWrapper {
+  margin: 0rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.titleTextWrapper {
+  display: flex;
+  flex: 1;
+  flex-basis: 20rem;
+  flex-direction: column;
+  margin: 0rem;
+  padding: 0rem;
+  align-self: center;
+}
+
+.portrait {
+  object-fit: cover;
+  object-position: left;
+  width: 15rem;
+  height: 15rem;
+  margin-right: 3rem;
+  border-radius: 50%;
 }

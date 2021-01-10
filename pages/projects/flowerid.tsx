@@ -4,9 +4,9 @@ const FlowerID = () => (
   <ProjectDetails
     title="FlowerID"
     subtitle="Android app built with React Native that identifies photos of flowers using a convolutional neural network."
-    text={`The original idea for FlowerID came from when my parents bought a plant identification booklet to use on hikes. I was looking to make something with machine learning at the time and decided to try to make a basic flower identifier, focusing more on learning than the accuracy of its predictions.
+    text={`I created FlowerID together with a friend to learn about building neural networks and mobile apps. The convolutional neural network is constructed with Tensorflow and Keras. We decided to create the model architecture from scratch instead of retraining existing networks, such as MobileNet, since we wanted to learn about building a network ourselves.
     
-    I created FlowerID together with a friend to learn about building neural networks and mobile apps. The convolutional neural network is constructed with Tensorflow and Keras. We decided to create the model architecture from scratch instead of retraining existing networks, such as MobileNet, since we wanted to learn about building a network ourselves.
+    The original idea for FlowerID came from when my parents bought a plant identification booklet to use on hikes. I was looking to make something with machine learning at the time and decided to try to make a basic flower identifier, focusing more on learning than the accuracy of its predictions.
     
     We used this dataset: https://www.kaggle.com/alxmamaev/flowers-recognition, which has labeled images of 5 flower types: daisies, dandelions, roses, sunflowers, and tulips. This is why our app currently only supports these flower types. In the future, we may expand this to support more species, but once again, the goal was to create something of a proof of concept as a learning experience.
     
