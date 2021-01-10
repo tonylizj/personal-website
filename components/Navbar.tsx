@@ -47,7 +47,9 @@ const customNavbar = (props: customNavbarProps) => {
   const { currPage } = props;
   return (
     <Navbar className={styles.navbar} variant="dark" expand="md" sticky="top">
-      <Navbar.Brand className={styles.navbrand}>Tony Li</Navbar.Brand>
+      <Link href="/" passHref>
+        <Navbar.Brand className={styles.navbrand}>Tony Li</Navbar.Brand>
+      </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav defaultActiveKey={currPage} className="mr-auto">

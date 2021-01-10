@@ -33,7 +33,6 @@ const ProjectCard = (props: ProjectCardProps) => {
       <Container className={styles.nextImageContainer}>
         <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="80" priority />
       </Container>
-      {/* <Card.Img variant="top" src={image} /> */}
       <Card.Body>
         <Link href={details} passHref>
           <a>
