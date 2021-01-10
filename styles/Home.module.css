@@ -62,11 +62,15 @@
   align-self: center;
 }
 
-.portrait {
-  object-fit: cover;
-  object-position: left;
+.nextImageContainer {
+  margin: 0rem;
+  padding: 0rem;
+  position: relative;
   width: 15rem;
   height: 15rem;
   margin-right: 3rem;
+}
+
+.nextImage {
   border-radius: 50%;
 }

@@ -18,7 +18,9 @@ const Home = () => {
           <Container className={styles.insideMainJumbo}>
             <Container className={styles.wrapper} fluid>
               <Container className={styles.titleWrapper} fluid>
-                <img alt="portrait" className={styles.portrait} src="portrait.jpg" />
+                <Container className={styles.nextImageContainer}>
+                  <Image className={styles.nextImage} src="/portrait.jpg" layout="fill" objectFit="cover" objectPosition="left" quality="90" loading="eager" priority />
+                </Container>
                 <Container className={styles.titleTextWrapper} fluid>
                   <h1 className={styles.title}>{title}</h1>
                   <h4 className={styles.subtitle}>{subtitle}</h4>
