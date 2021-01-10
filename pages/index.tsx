@@ -19,7 +19,7 @@ const Home = () => {
             <Container className={styles.wrapper} fluid>
               <Container className={styles.titleWrapper} fluid>
                 <Container className={styles.nextImageContainer}>
-                  <Image className={styles.nextImage} src="/portrait.jpg" layout="fill" objectFit="cover" objectPosition="left" quality="80" loading="eager" priority />
+                  <Image className={styles.nextImage} src="/portrait.jpg" layout="fill" objectFit="cover" objectPosition="left" quality="70" priority />
                 </Container>
                 <Container className={styles.titleTextWrapper} fluid>
                   <h1 className={styles.title}>{title}</h1>

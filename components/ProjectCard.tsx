@@ -31,7 +31,7 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <Card className={styles.card}>
       <Container className={styles.nextImageContainer}>
-        <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="90" loading="eager" priority />
+        <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="80" priority />
       </Container>
       {/* <Card.Img variant="top" src={image} /> */}
       <Card.Body>
@@ -46,9 +46,9 @@ const ProjectCard = (props: ProjectCardProps) => {
         <Container className={styles.details}>
           <Link href={details} passHref>
             <Button className={styles.detailsButton} variant="primary">
-              About
-              {' '}
               {title}
+              {' '}
+              Details
             </Button>
           </Link>
         </Container>
