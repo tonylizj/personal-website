@@ -27,6 +27,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   min-height: 4rem;
+  margin-bottom: 1rem;
 }
 
 .buttonsName {

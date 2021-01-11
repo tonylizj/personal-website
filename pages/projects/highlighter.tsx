@@ -4,6 +4,9 @@ const highlighter = () => (
   <ProjectDetails
     title="highlighter"
     subtitle="Discord bot and React web app with a Node.js + Express REST API backend that syntax highlights code."
+    summaryText={`highlighter is an API, Discord bot, and React frontend that provides an interface to syntax highlight code in numerous languages.
+    
+    highlighter is composed of three parts. The API is built with Node.js and Express and is responsible for processing code strings and generating syntax highlighted HTML documents and images. The Discord bot uses this API while parsing users' commands into the desired language and quality. The React frontend is a simple form built with Formik and Bootstrap to send POST requests to the API.`}
     text={`I wanted to make a syntax highlighting tool for Discord because I often shared code snippets with my friends during discussions. There exists a built in code formatting option on Discord, but the highlighting is quite minimal and I didn't really like the colour scheme, so I decided to make my own utility for this. A comparison between Discord's code formatting and the result of highlighter can be found at the bottom of this card.
     
     After some investigation, I decided to use the Prism.js library on a Node.js server to perform the highlighting. Prism.js exposes a function that enables the tokenization of the input code into semantic elements. For example, the input "const a;" in Typescript would yield the result 

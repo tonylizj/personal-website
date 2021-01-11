@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
+import Alert from 'react-bootstrap/Alert';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Head from './Head';
@@ -8,6 +10,30 @@ import PageBase from './PageBase';
 import Jumbotron from './Jumbotron';
 
 import styles from '../styles/ProjectDetails.module.css';
+
+const ProjectMoreDetails = (props: { title: string, details: string }) => {
+  const { title, details } = props;
+  const [show, setShow] = useState(false);
+
+  return (
+    <>
+      <Alert show={show} variant="success">
+        <Alert.Heading>{`${title} Details`}</Alert.Heading>
+        <Card.Text className={styles.cardText}>
+          {details}
+        </Card.Text>
+        <hr />
+        <div className="d-flex justify-content-end">
+          <Button onClick={() => setShow(false)} variant="outline-success">
+            Hide Details
+          </Button>
+        </div>
+      </Alert>
+
+      {!show && <Button variant="primary" style={{ marginBottom: '2rem' }} onClick={() => setShow(true)}>Show Details</Button>}
+    </>
+  );
+};
 
 interface ProjectLink {
   name: string;
@@ -22,6 +48,7 @@ interface ImageSize {
 interface ProjectDetailsProps {
   title: string;
   subtitle: string;
+  summaryText: string;
   text: string;
   images: string[];
   sizes: ImageSize[];
@@ -31,7 +58,7 @@ interface ProjectDetailsProps {
 
 const ProjectDetails = (props: ProjectDetailsProps) => {
   const {
-    title, subtitle, text, images, captions, buttons, sizes,
+    title, subtitle, summaryText, text, images, captions, buttons, sizes,
   } = props;
   return (
     <>
@@ -48,13 +75,14 @@ const ProjectDetails = (props: ProjectDetailsProps) => {
                   {buttons.map((b) => <Button key={b.url} className={styles.linkButton} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>)}
                 </Container>
                 <Card.Text className={styles.cardText}>
-                  {text}
+                  {summaryText}
                 </Card.Text>
+                <ProjectMoreDetails title={title} details={text} />
                 <Container className={styles.cardAttachments}>
                   {images.map((img, i) => (
                     <Container key={img} className={styles.imgContainer}>
                       <Image src={`/${img}`} layout="intrinsic" height={sizes[i].height} width={sizes[i].width} objectFit="contain" quality="90" loading="eager" priority />
-                      <p>{captions[i]}</p>
+                      <p style={{ maxWidth: sizes[i].width }}>{captions[i]}</p>
                     </Container>
                   ))}
                 </Container>
