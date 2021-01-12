@@ -65,7 +65,7 @@ const ProjectDetails = (props: ProjectDetailsProps) => {
       <Head subpageTitle={`Projects/${title}`} />
       <PageBase pageName="projects">
         <Jumbotron className={styles.mainJumbo}>
-          <Container className={styles.insideMainJumbo}>
+          <Container className={styles.insideMainJumbo} fluid>
             <Card className={styles.card}>
               <Card.Body className={styles.cardBody}>
                 <Card.Title className={styles.cardTitle}>{title}</Card.Title>
