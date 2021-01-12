@@ -45,9 +45,9 @@ const ProjectCard = (props: ProjectCardProps) => {
         <Container className={styles.details}>
           <Link href={details} passHref>
             <Button className={styles.detailsButton} variant="primary">
-              {title}
+              About
               {' '}
-              Details
+              {title}
             </Button>
           </Link>
         </Container>

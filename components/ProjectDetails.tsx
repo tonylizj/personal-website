@@ -30,7 +30,7 @@ const ProjectMoreDetails = (props: { title: string, details: string }) => {
         </div>
       </Alert>
 
-      {!show && <Button variant="primary" style={{ marginBottom: '2rem' }} onClick={() => setShow(true)}>Show Details</Button>}
+      {!show && <Button variant="primary" style={{ marginTop: '2rem', marginBottom: '2rem' }} onClick={() => setShow(true)}>Show Details</Button>}
     </>
   );
 };
