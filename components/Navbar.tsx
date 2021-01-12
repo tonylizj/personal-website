@@ -60,7 +60,7 @@ const customNavbar = (props: customNavbarProps) => {
         <NextButtonLink href="https://github.com/tonylizj">
           GitHub
         </NextButtonLink>
-        <NextButtonLink href="/" disabled>
+        <NextButtonLink href="/resume.pdf">
           Resume
         </NextButtonLink>
       </Navbar.Collapse>
