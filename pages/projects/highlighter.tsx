@@ -1,6 +1,6 @@
 import ProjectDetails from '../../components/ProjectDetails';
 
-const highlighter = () => (
+const Highlighter = () => (
   <ProjectDetails
     title="highlighter"
     subtitle="Discord bot and React web app with a Node.js + Express REST API backend that syntax highlights code."
@@ -33,4 +33,4 @@ const highlighter = () => (
   />
 );
 
-export default highlighter;
+export default Highlighter;

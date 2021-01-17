@@ -34,6 +34,14 @@ const Projects = () => (
             ]}
             image="images/highlighter-icon.png"
           />
+          <ProjectCard
+            title="Watopoly"
+            message="University of Waterloo themed Monopoly game written in C++."
+            details="/projects/watopoly"
+            buttons={[
+              { name: 'Code available on request', disabled: true },
+            ]}
+          />
         </Container>
       </Jumbotron>
     </PageBase>

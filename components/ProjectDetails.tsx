@@ -37,7 +37,8 @@ const ProjectMoreDetails = (props: { title: string, details: string }) => {
 
 interface ProjectLink {
   name: string;
-  url: string;
+  url?: string;
+  disabled?: boolean;
 }
 
 interface ImageSize {
@@ -49,7 +50,7 @@ interface ProjectDetailsProps {
   title: string;
   subtitle: string;
   summaryText: string;
-  text: string;
+  text?: string;
   images: string[];
   sizes: ImageSize[];
   captions: string[];
@@ -72,12 +73,12 @@ const ProjectDetails = (props: ProjectDetailsProps) => {
                 <Card.Subtitle className={`text-muted ${styles.cardSubtitle}`}>{subtitle}</Card.Subtitle>
                 <Container className={styles.buttonContainer}>
                   <h4 className={styles.buttonsName}>Links: </h4>
-                  {buttons.map((b) => <Button key={b.url} className={styles.linkButton} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>)}
+                  {buttons.map((b) => (b.disabled ? <Button key={b.url} className={styles.linkButton} variant="outline-primary" disabled>{b.name}</Button> : <Button key={b.url} className={styles.linkButton} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>))}
                 </Container>
                 <Card.Text className={styles.cardText}>
                   {summaryText}
                 </Card.Text>
-                <ProjectMoreDetails title={title} details={text} />
+                {text === '' || text === undefined ? null : <ProjectMoreDetails title={title} details={text} />}
                 <Container className={styles.cardAttachments}>
                   {images.map((img, i) => (
                     <Container key={img} className={styles.imgContainer}>
@@ -100,6 +101,10 @@ const ProjectDetails = (props: ProjectDetailsProps) => {
       </PageBase>
     </>
   );
+};
+
+ProjectDetails.defaultProps = {
+  text: '',
 };
 
 export default ProjectDetails;

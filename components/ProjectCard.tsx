@@ -9,7 +9,8 @@ import styles from '../styles/ProjectCard.module.css';
 
 interface ProjectLink {
   name: string;
-  url: string;
+  url?: string;
+  disabled?: boolean;
 }
 
 interface ProjectCardProps {
@@ -17,7 +18,7 @@ interface ProjectCardProps {
   message: string;
   details: string;
   buttons: ProjectLink[];
-  image: string;
+  image?: string;
 }
 
 const ProjectCard = (props: ProjectCardProps) => {
@@ -30,9 +31,12 @@ const ProjectCard = (props: ProjectCardProps) => {
   } = props;
   return (
     <Card className={styles.card}>
-      <Container className={styles.nextImageContainer}>
-        <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="80" priority />
-      </Container>
+      {image === '' ? null
+        : (
+          <Container className={styles.nextImageContainer}>
+            <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="80" priority />
+          </Container>
+        )}
       <Card.Body>
         <Link href={details} passHref>
           <a>
@@ -52,11 +56,15 @@ const ProjectCard = (props: ProjectCardProps) => {
           </Link>
         </Container>
         <Container className={styles.buttonContainer}>
-          {buttons.map((b) => <Button key={b.url} className={styles.linkButton} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>)}
+          {buttons.map((b) => (b.disabled ? <Button key={b.url} className={styles.linkButton} variant="outline-primary" disabled>{b.name}</Button> : <Button key={b.url} className={styles.linkButton} variant="outline-primary" href={b.url} target="_blank">{b.name}</Button>))}
         </Container>
       </Card.Footer>
     </Card>
   );
+};
+
+ProjectCard.defaultProps = {
+  image: '',
 };
 
 export default ProjectCard;
