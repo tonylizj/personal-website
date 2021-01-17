@@ -7,7 +7,7 @@ const ConfigSync = () => (
     summaryText={`config-sync is an extension written in Node.js with Typescript with the Visual Studio Code extension development API.
     
     Users can provide a connection to their MongoDB instance or use global storage on local disk provided by the API. The extension then allows uploading files (with custom aliases) as well as downloading and writing files to the current workspace directory with a single command without ever leaving the text editor.`}
-    images={['images/configsyncDetails/storePage.png', 'images/configsyncDetails/mongodb.png']}
+    images={['images/configSyncDetails/storePage.png', 'images/configSyncDetails/mongodb.png']}
     sizes={[{ height: 350, width: 450 }, { height: 350, width: 450 }]}
     captions={['Feature Contributions', 'Uploaded Files on a MongoDB database']}
     buttons={[
