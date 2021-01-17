@@ -14,4 +14,5 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-content: flex-start;
+  max-width: calc(100vw - 15rem);
 }

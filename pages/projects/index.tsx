@@ -35,6 +35,16 @@ const Projects = () => (
             image="images/highlighter-icon.png"
           />
           <ProjectCard
+            title="config-sync"
+            message="VSCode extension that syncs configuration files between similar projects with a MongoDB database."
+            details="/projects/config-sync"
+            buttons={[
+              { name: 'GitHub', url: 'https://github.com/tonylizj/config-sync' },
+              { name: 'Extension Marketplace', url: 'https://marketplace.visualstudio.com/items?itemName=tonylizj.config-sync' },
+            ]}
+            image="images/config-sync-icon.png"
+          />
+          <ProjectCard
             title="Watopoly"
             message="University of Waterloo themed Monopoly game written in C++."
             details="/projects/watopoly"
