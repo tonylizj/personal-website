@@ -36,7 +36,7 @@ const Projects = () => (
           />
           <ProjectCard
             title="config-sync"
-            message="VSCode extension that syncs configuration files between similar projects with a MongoDB database."
+            message="VS Code extension that makes starting new projects easier by syncing configuration files with a MongoDB database. "
             details="/projects/config-sync"
             buttons={[
               { name: 'GitHub', url: 'https://github.com/tonylizj/config-sync' },
