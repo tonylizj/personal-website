@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.css';
 const Home = () => {
   const title = 'Hello. I\'m Tony.';
   const subtitle = 'I\'m an undergraduate computer science student at the University of Waterloo.';
-  const construction = 'Use the header to navigate this website. This website is under construction.';
+  const construction = '';
   return (
     <>
       <Head />
