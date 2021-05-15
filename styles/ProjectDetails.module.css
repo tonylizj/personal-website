@@ -51,6 +51,16 @@
   white-space: pre-line;
 }
 
+@media (max-width: 700px) {
+  .cardBody {
+    overflow: auto;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-line;
+  }
+}
+
 .cardTitle {
   margin-top: 0.5rem;
   font-size: 2rem;
@@ -61,7 +71,7 @@
 }
 
 .cardText {
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .cardAttachments {
