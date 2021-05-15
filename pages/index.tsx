@@ -9,8 +9,9 @@ import styles from '../styles/Home.module.css';
 
 const Home = () => {
   const title = 'Hello. I\'m Tony.';
-  const subtitle = 'I\'m an undergraduate computer science student at the University of Waterloo.';
-  const construction = '';
+  const subtitle = 'I\'m an undergraduate computer science student at the University of Waterloo. Currently on co-op as a software developer at Honeybee Hub';
+
+  const extra = '';
 
   return (
     <>
@@ -30,7 +31,7 @@ const Home = () => {
               </Container>
             </Container>
             <Container className={styles.wrapper} fluid>
-              <p className={styles.construction}>{construction}</p>
+              <p className={styles.extra}>{extra}</p>
             </Container>
           </Container>
         </Jumbotron>

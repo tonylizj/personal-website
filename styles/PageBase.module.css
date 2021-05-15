@@ -3,14 +3,11 @@
   height: 100vh;
   margin: 0rem;
   padding: 0rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .belowNav {
   display: flex;
   flex-direction: column;
   /* navbar height = 4.55rem, jumbotron margin-top = 1rem */
-  /* height: calc(100vh - 4.55rem); */
-  flex-grow: 1;
+  height: calc(100vh - 4.55rem);
 }
