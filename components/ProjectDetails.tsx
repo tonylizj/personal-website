@@ -82,7 +82,7 @@ const ProjectDetails = (props: ProjectDetailsProps) => {
                 <Container className={styles.cardAttachments}>
                   {images.map((img, i) => (
                     <Container key={img} className={styles.imgContainer}>
-                      <Image src={`/${img}`} layout="intrinsic" height={sizes[i].height} width={sizes[i].width} objectFit="contain" quality="90" loading="eager" priority />
+                      <Image src={`/${img}`} layout="intrinsic" height={sizes[i].height} width={sizes[i].width} objectFit="contain" quality="90" loading="eager" unoptimized priority />
                       <p style={{ maxWidth: sizes[i].width }}>{captions[i]}</p>
                     </Container>
                   ))}
