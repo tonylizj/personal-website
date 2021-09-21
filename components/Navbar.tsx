@@ -8,7 +8,7 @@ import styles from '../styles/Navbar.module.css';
 
 interface NextNavLinkProps {
   href: string;
-  eventKey?: string;
+  eventKey: string;
 }
 
 const NextNavLink = (props: React.PropsWithChildren<NextNavLinkProps>) => {
@@ -24,7 +24,6 @@ const NextNavLink = (props: React.PropsWithChildren<NextNavLinkProps>) => {
 
 interface NextButtonLinkProps {
   href: string;
-  eventKey?: string;
   disabled?: boolean;
 }
 
@@ -37,6 +36,10 @@ const NextButtonLink = (props: React.PropsWithChildren<NextButtonLinkProps>) => 
         : <Button className={styles.btn} variant="outline-light" size="lg" target="_blank">{children}</Button>}
     </Link>
   );
+};
+
+NextButtonLink.defaultProps = {
+  disabled: false,
 };
 
 interface customNavbarProps {
