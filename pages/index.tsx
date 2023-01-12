@@ -7,6 +7,8 @@ import PageBase from '../components/PageBase';
 
 import styles from '../styles/Home.module.css';
 
+import profilePic from '../public/portrait.jpg';
+
 const Home = () => {
   const title = 'Hello. I\'m Tony.';
   const subtitle = 'I\'m an undergraduate computer science student at the University of Waterloo.';
@@ -22,7 +24,7 @@ const Home = () => {
             <Container className={styles.wrapper} fluid>
               <Container className={styles.titleWrapper} fluid>
                 <Container className={styles.nextImageContainer}>
-                  <Image className={styles.nextImage} src="/portrait.jpg" layout="fill" objectFit="cover" objectPosition="left" quality="60" priority />
+                  <Image src={profilePic} layout="fill" objectFit="cover" placeholder="blur" priority />
                 </Container>
                 <Container className={styles.titleTextWrapper} fluid>
                   <h1 className={styles.title}>{title}</h1>
