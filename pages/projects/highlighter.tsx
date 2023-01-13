@@ -1,5 +1,8 @@
 import ProjectDetails from '../../components/ProjectDetails';
 
+import discordHighlight from '../../public/images/highlighterDetails/discordHighlight.png';
+import hlHighlight from '../../public/images/highlighterDetails/hlHighlight.png';
+
 // eslint-disable-next-line react/function-component-definition
 const Highlighter = () => (
   <ProjectDetails
@@ -22,8 +25,7 @@ const Highlighter = () => (
     
     This is a comparison of the highlighting of a random code block by Discord and highlighter respectively. Note the difference in colours and contrast as well as ligatures such as '>=' that improve readability.
     `}
-    images={['images/highlighterDetails/discordHighlight.png', 'images/highlighterDetails/hlHighlight.png']}
-    sizes={[{ height: 350, width: 450 }, { height: 350, width: 450 }]}
+    images={[discordHighlight, hlHighlight]}
     captions={['Discord Highlighting', 'highlighter Highlighting']}
     buttons={[
       { name: 'GitHub', url: 'https://github.com/tonylizj/highlighter' },

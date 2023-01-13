@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Alert from 'react-bootstrap/Alert';
 import Card from 'react-bootstrap/Card';
@@ -42,18 +42,12 @@ interface ProjectLink {
   disabled?: boolean;
 }
 
-interface ImageSize {
-  height: number;
-  width: number;
-}
-
 interface ProjectDetailsProps {
   title: string;
   subtitle: string;
   summaryText: string;
   text?: string;
-  images: string[];
-  sizes: ImageSize[];
+  images: StaticImageData[];
   captions: string[];
   buttons: ProjectLink[];
 }
@@ -61,7 +55,7 @@ interface ProjectDetailsProps {
 // eslint-disable-next-line react/function-component-definition
 const ProjectDetails = (props: ProjectDetailsProps) => {
   const {
-    title, subtitle, summaryText, text, images, captions, buttons, sizes,
+    title, subtitle, summaryText, text, images, captions, buttons,
   } = props;
   return (
     <>
@@ -83,19 +77,17 @@ const ProjectDetails = (props: ProjectDetailsProps) => {
                 {text === '' || text === undefined ? null : <ProjectMoreDetails title={title} details={text} />}
                 <Container className={styles.cardAttachments}>
                   {images.map((img, i) => (
-                    <Container style={{ maxWidth: 'max-content' }}>
-                      <Container
-                        key={img}
-                        className={styles.imgContainer}
-                        style={{
-                          minHeight: sizes[i].height,
-                          minWidth: sizes[i].width,
-                        }}
-                      >
-                        {/* TODO: do static image import and blur placeholder */}
-                        <Image src={`/${img}`} alt="featureImage" quality="90" style={{ objectFit: 'contain' }} priority fill />
-                      </Container>
-                      <p style={{ maxWidth: sizes[i].width, flexShrink: 0 }}>{captions[i]}</p>
+                    <Container
+                      as="figure"
+                      style={{
+                        display: 'table',
+                        maxWidth: 'max-content',
+                        padding: '0',
+                        position: 'relative',
+                      }}
+                    >
+                      <Image src={img} className={styles.featureImage} alt="featureImage" placeholder="blur" priority />
+                      <figcaption style={{ display: 'table-caption', captionSide: 'bottom' }}>{captions[i]}</figcaption>
                     </Container>
                   ))}
                 </Container>

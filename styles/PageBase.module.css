@@ -7,8 +7,8 @@
 
 .belowNav {
   display: flex;
-  flex-direction: column;
-  /* navbar height = 4.55rem, jumbotron margin-top = 1rem */
+  flex-direction: row;
+  /* navbar height = 4.55rem, jumbotron padding-top = 2.5rem */
   height: calc(100vh - 4.55rem);
   margin: 0rem;
   padding: 1rem;

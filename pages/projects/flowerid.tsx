@@ -1,5 +1,9 @@
 import ProjectDetails from '../../components/ProjectDetails';
 
+import loading from '../../public/images/floweridDetails/loading.jpg';
+import viewfinder from '../../public/images/floweridDetails/viewfinder.jpg';
+import results from '../../public/images/floweridDetails/results.jpg';
+
 // eslint-disable-next-line react/function-component-definition
 const FlowerID = () => (
   <ProjectDetails
@@ -18,8 +22,7 @@ const FlowerID = () => (
     
     The FlowerID Android app was built with React Native (and a bit of Expo) with the help of Tensorflow JS. The initial release used Javascript, but I switched to using Typescript because of my preference for statically typed languages, especially after working with C++ for some time.
     `}
-    images={['images/floweridDetails/loading.jpg', 'images/floweridDetails/viewfinder.jpg', 'images/floweridDetails/results.jpg']}
-    sizes={[{ height: 400, width: 200 }, { height: 400, width: 200 }, { height: 400, width: 200 }]}
+    images={[loading, viewfinder, results]}
     captions={['FlowerID Loading Up', 'Camera Viewfinder', 'Prediction Results (Text: This is an image of Sunflower)']}
     buttons={[
       { name: 'GitHub', url: 'https://github.com/tonylizj/FlowerID-App' },

@@ -35,12 +35,44 @@
 .buttonsName {
   margin-top: 0.5rem;
   margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .buttonsName {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  .buttonsName {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    font-size: 2.5rem;
+  }
 }
 
 .linkButton {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  margin-right: 0.5rem;
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .linkButton {
+    margin: 0.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  @media (max-width: 700px) {
+    .linkButton {
+      margin: 0.2rem;
+      font-size: 2rem;
+    }
+  }
 }
 
 .cardBody {
@@ -49,6 +81,26 @@
   display: flex;
   flex-direction: column;
   white-space: pre-line;
+}
+
+@media (max-width: 700px) {
+  .cardBody {
+    overflow: auto;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-line;
+  }
+}
+
+@media (min-width: 3000px) {
+  .cardBody {
+    overflow: auto;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-line;
+  }
 }
 
 @media (max-width: 700px) {
@@ -66,12 +118,33 @@
   font-size: 2rem;
 }
 
+@media (min-width: 3000px) {
+  .cardTitle {
+    margin-top: 0.5rem;
+    font-size: 3rem;
+  }
+}
+
 .cardSubtitle {
   margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 3000px) {
+  .cardSubtitle {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
 }
 
 .cardText {
-  /* flex-grow: 1; */
+  font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+  .cardText {
+    font-size: 1rem;
+  }
 }
 
 .cardAttachments {
@@ -81,11 +154,12 @@
   justify-content: space-around;
 }
 
-.imgContainer {
-  display: flex;
-  flex-direction: column;
-  max-width: max-content;
-  position: relative;
+.featureImage {
+  width: 100%;
+  height: 100%;
+  max-width: 40rem;
+  max-height: 40rem;
+  object-fit: contain;
 }
 
 .linkContainer {

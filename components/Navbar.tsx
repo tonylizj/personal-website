@@ -56,9 +56,9 @@ const customNavbar = (props: customNavbarProps) => {
       <Link href="/" passHref legacyBehavior>
         <Navbar.Brand className={styles.navbrand}>Tony Li</Navbar.Brand>
       </Link>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle style={{ marginRight: '1.5rem' }} aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className={styles.navLinks} id="basic-navbar-nav">
-        <Nav defaultActiveKey={currPage} className="mr-auto">
+        <Nav style={{ marginLeft: '1rem' }} defaultActiveKey={currPage} className="mr-auto">
           <NextNavLink href="/" eventKey="home">Home</NextNavLink>
           <NextNavLink href="/projects" eventKey="projects">Projects</NextNavLink>
           <NextNavLink href="/pictures" eventKey="pictures">Pictures</NextNavLink>

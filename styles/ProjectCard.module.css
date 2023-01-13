@@ -6,14 +6,62 @@
   height: fit-content;
 }
 
+@media (max-width: 700px) {
+  .card {
+    width: 18rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    height: fit-content;
+  }
+}
+
+@media (min-width: 3000px) {
+  .card {
+    width: 25rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: fit-content;
+  }
+}
+
 .title {
   color: black;
   font-size: 2rem;
   font-weight: 600;
 }
 
+@media (max-width: 700px) {
+  .title {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 3000px) {
+  .title {
+    color: black;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
 .description {
   font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  .description {
+    font-size: 1.8rem;
+  }
 }
 
 .details {
@@ -27,6 +75,22 @@
   flex-grow: 1;
 }
 
+@media (max-width: 700px) {
+  .detailsButton {
+    font-size: 1rem;
+    font-weight: 600;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 3000px) {
+  .detailsButton {
+    font-size: 2rem;
+    font-weight: 600;
+    flex-grow: 1;
+  }
+}
+
 .buttonContainer {
   display: flex;
   flex-wrap: wrap;
@@ -35,6 +99,14 @@
 
 .linkButton {
   margin: 0.2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .linkButton {
+    margin: 0.2rem;
+    font-size: 0.8rem;
+  }
 }
 
 .nextImageContainer {

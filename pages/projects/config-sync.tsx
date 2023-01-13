@@ -1,5 +1,8 @@
 import ProjectDetails from '../../components/ProjectDetails';
 
+import storePage from '../../public/images/configSyncDetails/storePage.png';
+import mongodb from '../../public/images/configSyncDetails/mongodb.png';
+
 // eslint-disable-next-line react/function-component-definition
 const ConfigSync = () => (
   <ProjectDetails
@@ -8,8 +11,7 @@ const ConfigSync = () => (
     summaryText={`config-sync is an extension written in Node.js with Typescript with the Visual Studio Code extension development API.
     
     Users can provide a connection to their MongoDB instance or use global storage on local disk provided by the API. The extension then allows uploading files (with custom aliases) as well as downloading and writing files to the current workspace directory with a single command without ever leaving the text editor.`}
-    images={['images/configSyncDetails/storePage.png', 'images/configSyncDetails/mongodb.png']}
-    sizes={[{ height: 350, width: 450 }, { height: 350, width: 450 }]}
+    images={[storePage, mongodb]}
     captions={['Feature Contributions', 'Uploaded Files on a MongoDB database']}
     buttons={[
       { name: 'GitHub', url: 'https://github.com/tonylizj/config-sync' },
