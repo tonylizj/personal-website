@@ -8,6 +8,7 @@ interface JumboPageBaseProps {
   pageName: string;
 }
 
+// eslint-disable-next-line react/function-component-definition
 const PageBase = (props: React.PropsWithChildren<JumboPageBaseProps>) => {
   const { pageName, children } = props;
   return (

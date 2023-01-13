@@ -6,12 +6,14 @@ import PageBase from '../../components/PageBase';
 
 import styles from '../../styles/Projects.module.css';
 
+// eslint-disable-next-line react/function-component-definition
 const Projects = () => (
   <>
     <Head subpageTitle="Projects" />
     <PageBase pageName="projects">
       <Jumbotron className={styles.mainJumbo}>
         <Container className={styles.insideMainJumbo}>
+          {/* TODO: move this data (and the ones in individual project pages) out to data files */}
           <ProjectCard
             title="FlowerID"
             message="Android app built with React Native that identifies photos of flowers using a convolutional neural network."

@@ -6,11 +6,11 @@ interface customHeadProps {
 
 const customHead = (props: customHeadProps) => {
   const { subpageTitle } = props;
+  const titleText = `Tony Li ${subpageTitle ? ` - ${subpageTitle}` : ''}`;
   return (
     <Head>
       <title>
-        Tony Li
-        {subpageTitle ? ` - ${subpageTitle}` : ''}
+        {titleText}
       </title>
     </Head>
   );

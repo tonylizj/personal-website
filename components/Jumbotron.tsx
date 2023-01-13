@@ -1,5 +1,5 @@
 import React from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import Container from 'react-bootstrap/Container';
 
 import styles from '../styles/Jumbotron.module.css';
 
@@ -10,9 +10,9 @@ interface customJumbotronProps {
 const customJumbotron = (props: React.PropsWithChildren<customJumbotronProps>) => {
   const { className } = props;
   return (
-    <Jumbotron className={`${styles.jumbotron} ${className}`}>
+    <Container className={`${styles.jumbotron} ${className}`}>
       {props.children}
-    </Jumbotron>
+    </Container>
   );
 };
 

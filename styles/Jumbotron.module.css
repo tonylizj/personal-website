@@ -1,4 +1,6 @@
 .jumbotron {
-  margin: 1rem 0rem;
+  width: 100%;
+  max-width: none;
+  padding: 1rem 1rem;
   border-radius: 1rem;
 }

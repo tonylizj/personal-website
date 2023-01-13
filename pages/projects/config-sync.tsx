@@ -1,5 +1,6 @@
 import ProjectDetails from '../../components/ProjectDetails';
 
+// eslint-disable-next-line react/function-component-definition
 const ConfigSync = () => (
   <ProjectDetails
     title="config-sync"

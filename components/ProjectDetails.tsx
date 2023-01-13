@@ -11,6 +11,7 @@ import Jumbotron from './Jumbotron';
 
 import styles from '../styles/ProjectDetails.module.css';
 
+// eslint-disable-next-line react/function-component-definition
 const ProjectMoreDetails = (props: { title: string, details: string }) => {
   const { title, details } = props;
   const [show, setShow] = useState(false);
@@ -57,6 +58,7 @@ interface ProjectDetailsProps {
   buttons: ProjectLink[];
 }
 
+// eslint-disable-next-line react/function-component-definition
 const ProjectDetails = (props: ProjectDetailsProps) => {
   const {
     title, subtitle, summaryText, text, images, captions, buttons, sizes,
@@ -81,14 +83,24 @@ const ProjectDetails = (props: ProjectDetailsProps) => {
                 {text === '' || text === undefined ? null : <ProjectMoreDetails title={title} details={text} />}
                 <Container className={styles.cardAttachments}>
                   {images.map((img, i) => (
-                    <Container key={img} className={styles.imgContainer}>
-                      <Image src={`/${img}`} layout="intrinsic" height={sizes[i].height} width={sizes[i].width} objectFit="contain" quality="90" loading="eager" priority />
-                      <p style={{ maxWidth: sizes[i].width }}>{captions[i]}</p>
+                    <Container style={{ maxWidth: 'max-content' }}>
+                      <Container
+                        key={img}
+                        className={styles.imgContainer}
+                        style={{
+                          minHeight: sizes[i].height,
+                          minWidth: sizes[i].width,
+                        }}
+                      >
+                        {/* TODO: do static image import and blur placeholder */}
+                        <Image src={`/${img}`} alt="featureImage" quality="90" style={{ objectFit: 'contain' }} priority fill />
+                      </Container>
+                      <p style={{ maxWidth: sizes[i].width, flexShrink: 0 }}>{captions[i]}</p>
                     </Container>
                   ))}
                 </Container>
                 <Container className={styles.linkContainer}>
-                  <Link href="/projects" passHref>
+                  <Link href="/projects" passHref legacyBehavior>
                     <Card.Link className="text-primary">
                       &larr;Back to Projects
                     </Card.Link>

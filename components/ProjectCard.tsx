@@ -21,6 +21,7 @@ interface ProjectCardProps {
   image?: string;
 }
 
+// eslint-disable-next-line react/function-component-definition
 const ProjectCard = (props: ProjectCardProps) => {
   const {
     title,
@@ -34,20 +35,18 @@ const ProjectCard = (props: ProjectCardProps) => {
       {image === '' ? null
         : (
           <Container className={styles.nextImageContainer}>
-            <Image src={`/${image}`} layout="fill" objectFit="cover" objectPosition="center" quality="80" priority />
+            <Image src={`/${image}`} alt="icon" fill style={{ objectFit: 'cover', objectPosition: 'center' }} quality="80" priority />
           </Container>
         )}
       <Card.Body>
-        <Link href={details} passHref>
-          <a>
-            <Card.Title className={styles.title}>{title}</Card.Title>
-          </a>
+        <Link style={{ textDecoration: 'none' }} href={details}>
+          <Card.Title className={styles.title}>{title}</Card.Title>
         </Link>
         <Card.Text className={styles.description}>{message}</Card.Text>
       </Card.Body>
       <Card.Footer>
         <Container className={styles.details}>
-          <Link href={details} passHref>
+          <Link href={details} passHref legacyBehavior>
             <Button className={styles.detailsButton} variant="primary">
               About
               {' '}

@@ -4,6 +4,7 @@ import PageBase from '../../components/PageBase';
 
 import styles from '../../styles/Pictures.module.css';
 
+// eslint-disable-next-line react/function-component-definition
 const Pictures = () => (
   <>
     <Head subpageTitle="Pictures" />
